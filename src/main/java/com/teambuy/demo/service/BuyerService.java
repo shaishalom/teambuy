@@ -29,7 +29,7 @@ public class BuyerService {
         }
     }
      
-    public BuyerEntity getEmployeeById(Long id) throws RecordNotFoundException
+    public BuyerEntity getBuyerById(Long id) throws RecordNotFoundException
     {
         Optional<BuyerEntity> buyer = repository.findById(id);
          
@@ -40,7 +40,7 @@ public class BuyerService {
         }
     }
      
-    public BuyerEntity createOrUpdateEmployee(BuyerEntity entity) throws RecordNotFoundException
+    public BuyerEntity createOrUpdateBuyer(BuyerEntity entity) throws RecordNotFoundException
     {
         Optional<BuyerEntity> buyer = repository.findById(entity.getId());
          

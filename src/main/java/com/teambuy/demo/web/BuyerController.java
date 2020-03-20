@@ -25,24 +25,24 @@ public class BuyerController
     BuyerService service;
  
     @GetMapping
-    public ResponseEntity<List<BuyerEntity>> getAllEmployees() {
+    public ResponseEntity<List<BuyerEntity>> getAllBuyers() {
         List<BuyerEntity> list = service.getAllBuyers();
  
         return new ResponseEntity<List<BuyerEntity>>(list, new HttpHeaders(), HttpStatus.OK);
     }
  
     @GetMapping("/{id}")
-    public ResponseEntity<BuyerEntity> getEmployeeById(@PathVariable("id") Long id)
+    public ResponseEntity<BuyerEntity> getBuyerById(@PathVariable("id") Long id)
                                                     throws RecordNotFoundException {
-        BuyerEntity entity = service.getEmployeeById(id);
+        BuyerEntity entity = service.getBuyerById(id);
  
         return new ResponseEntity<BuyerEntity>(entity, new HttpHeaders(), HttpStatus.OK);
     }
  
     @PostMapping
-    public ResponseEntity<BuyerEntity> createOrUpdateEmployee(BuyerEntity buyer)
+    public ResponseEntity<BuyerEntity> createOrUpdateBuyer(BuyerEntity buyer)
                                                     throws RecordNotFoundException {
-        BuyerEntity updated = service.createOrUpdateEmployee(buyer);
+        BuyerEntity updated = service.createOrUpdateBuyer(buyer);
         return new ResponseEntity<BuyerEntity>(updated, new HttpHeaders(), HttpStatus.OK);
     }
  

@@ -19,7 +19,7 @@ public class DemoApplication implements WebMvcConfigurer {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 	
-	//@Override
+	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("swagger-ui.html")
 				.addResourceLocations("classpath:/META-INF/resources/");
@@ -28,8 +28,8 @@ public class DemoApplication implements WebMvcConfigurer {
 	}
 	
 	ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("SRQ068")
-				.description("This is a srq068 server ")
+		return new ApiInfoBuilder().title("TeamBuy")
+				.description("TeamBuy Azarya and Shai ")
 				.license("Apache 2.0")
 				.licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
 				.termsOfServiceUrl("")
